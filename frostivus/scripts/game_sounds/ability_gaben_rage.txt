@@ -1,0 +1,8 @@
+"Ability.GabenRage"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.2"
+	"soundlevel"  	"SNDLVL_90dB"
+	"pitch"			"100"
+	"wave"  ")gaben_rage.mp3"
+}

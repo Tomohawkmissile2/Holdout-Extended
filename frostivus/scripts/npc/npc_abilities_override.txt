@@ -1,0 +1,426 @@
+
+// Dota Abilities Override File
+"DOTAAbilities"
+{
+	"Version"		"1"
+	
+	//=================================================================================================================
+	// Helm of the Dominator Override
+	//=================================================================================================================
+	"item_helm_of_the_dominator"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_helm_of_the_dominator"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"Modifiers"
+		{
+			"modifier_hotd"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armor"
+				}
+				"Orb"
+				{
+					"Priority"			"DOTA_ORB_PRIORITY_ITEM"
+				}
+				
+				"OnOrbImpact"
+				{
+					"Lifesteal"
+					{
+						"Target"			"ATTACKER"
+						"LifestealPercent"	"%lifesteal_percent"
+					}
+				}
+			}
+		}
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"25"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"5"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lifesteal_percent"		"20"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Shiva's Override
+	//=================================================================================================================
+	"item_shivas_guard"
+	{
+		"AbilityCooldown"				"20"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"		"30"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"15"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"900"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_attack_speed"		"-30"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blast_radius"			"720"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blast_speed"			"300"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blast_damage"			"200"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blast_movement_speed"	"-40"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"blast_debuff_duration"	"4.0"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Quelling Blade
+	//=================================================================================================================
+	"item_quelling_blade"
+	{
+		"ItemCost"						"1000"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_bonus"			"35"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_bonus_ranged"	"20"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Courier
+	//=================================================================================================================
+	"item_courier"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+	}
+
+	//=================================================================================================================
+	// Flying Courier
+	//=================================================================================================================
+	"item_flying_courier"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+	}
+
+	//=================================================================================================================
+	// Smoke of Deceit
+	//=================================================================================================================
+	"item_smoke_of_deceit"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+	}
+
+
+	
+	//=================================================================================================================
+	// Elder Titan: Natural Order
+	//=================================================================================================================
+	"elder_titan_natural_order"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"150 250 350 450"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"armor_reduction"	    "3 6 9 12"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"magic_resistance_pct"		"10 20 30 40"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Witch Doctor: Maledict
+	//=================================================================================================================
+	"witch_doctor_maledict"
+	{
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	}
+	
+	//=================================================================================================================
+	// Templar Assassin: Trap
+	//=================================================================================================================
+	"templar_assassin_trap"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_speed_bonus"		"-60"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"trap_radius"				"400"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"trap_duration"				"10.0"
+			}
+			"04"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"movement_speed_bonus_stage"		"-6"
+			}	
+		}
+	}
+	
+	//=================================================================================================================
+	// Templar Assassin: Self Trap
+	//=================================================================================================================
+	"templar_assassin_self_trap"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_speed_bonus"		"-60"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"trap_radius"				"400"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"trap_duration"				"10.0"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_speed_bonus_stage"		"-6"
+			}
+		}
+	}		
+
+	//=================================================================================================================
+	// Elder Titan: Echo Stomp
+	//=================================================================================================================
+	"elder_titan_echo_stomp"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"cast_time"						"1.4"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"radius"						"475"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"sleep_duration"				"2.0 3.0 4.0 5.0"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"stomp_damage"					"40 80 120 160"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"initial_stun_duration"					"0.65"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Elder Titan: Echo Stomp (Spirit Version)
+	//=================================================================================================================
+	"elder_titan_echo_stomp_spirit"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"cast_time"						"1.4"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"radius"						"475"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"sleep_duration"				"2.0 3.0 4.0 5.0"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"stomp_damage"					"40 80 120 160"
+			}
+		}
+	}
+	
+	
+	//=================================================================================================================
+	// Ancient Apparition: Ice Blast
+	//=================================================================================================================
+	"ancient_apparition_ice_blast"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.01 0.01 0.01"
+		"AbilityCastRange"				"0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40.0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 125 150"
+		
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"250 350 450"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius_min"			"275 375 475"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"radius_grow"			"50.0 100.0 150.0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius_max"			"1000 2000 3000"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"path_radius"			"275 275 275"
+			}
+			"05"
+			{	
+				"var_type"				"FIELD_FLOAT"
+				"frostbite_duration"	"10.0 12.0 14.0"
+			}
+			"06"
+			{	
+				"var_type"				"FIELD_FLOAT"
+				"dot_damage"			"12 24 36"
+			}
+			"07"
+			{	
+				"var_type"				"FIELD_INTEGER"
+				"speed"					"1500 1500 1500 1500"
+			}
+			"08"
+			{	
+				"var_type"				"FIELD_FLOAT"
+				"kill_pct"				"10.0 11.0 12.0"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"target_sight_radius"	"500 500 500"
+			}
+			"10"
+			{	
+				"var_type"				"FIELD_FLOAT"
+				"frostbite_duration_scepter"	"20.0 25.0 30.0"
+			}
+		}
+	}
+	
+}

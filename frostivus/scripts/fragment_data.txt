@@ -1,0 +1,50 @@
+"FragmentData"
+{
+	"PhantomFragments"
+	{
+		"Round1"		"1000"
+		"Round2"		"1000"
+		"Round3"		"1000"
+		"Round4"		"1000"
+		"Round5"		"1000"
+		"Round6"		"1000"
+		"Round7"		"1000"
+		"Round8"		"1000"
+		"Round9"		"1000"
+		"Round10"		"1000"
+		"Round11"		"1000"
+		"Round12"		"1000"
+		"Round13"		"1000"
+	}
+
+	// phantom fragment multipliers
+	"BasePhantomFragmentScale"		"1.0"
+	"PersonalPhantomFragmentBoost"	"0.1"
+	"AllyPhantomFragmentBoost"		"0.1"
+	"DifficultyPhantomBoost"			"0.25"
+	"DifficultyPhantomCap"				"4"
+
+	"ShiningFragments"
+	{
+		"Round1"		"1000"
+		"Round2"		"1000"
+		"Round3"		"1000"
+		"Round4"		"1000"
+		"Round5"		"1000"
+		"Round6"		"1000"
+		"Round7"		"1000"
+		"Round8"		"1000"
+		"Round9"		"1000"
+		"Round10"		"1000"
+		"Round11"		"1000"
+		"Round12"		"1000"
+		"Round13"		"1000"
+	}
+
+	// shining fragment multipliers
+	"BaseShiningFragmentScale"		"0"
+	"PersonalShiningFragmentBoost"	"1.0"
+	"AllyShiningFragmentBoost"		"0.1"
+	"DifficultyShiningBoost"			"0.25"
+	"DifficultyShiningCap"				"4"
+}
