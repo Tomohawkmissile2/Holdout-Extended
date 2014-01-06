@@ -10993,7 +10993,7 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"1000"
+		"AbilityCastRange"				"700 800 900 1000"
 		"AbilityCastPoint"				"0.5 0.5 0.5 0.5"
 
 		// Time		
@@ -11087,7 +11087,7 @@
 			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"radius"		"600 700 800 900"
+				"radius"		"700 800 900 1000"
 			}
 		}
 	}
@@ -11122,7 +11122,6 @@
 		
 		"precache"
 		{
-			"particlefile"				"particles/units/heroes/hero_bane.pcf"
 			"soundfile"					"scripts/game_sounds/ability_boost_armor.txt"
 		}
 		
@@ -11183,6 +11182,61 @@
 			{
 				"var_type"						"FIELD_FLOAT"
 				"duration"		"6"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Holdout: Antimage Mana Break
+	// Changes: Restores 50% of mana broken to self; does not work properly
+	//=================================================================================================================
+	"holdout_mana_break"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"antimage_mana_break"	
+
+		// Modifiers
+		//-------------------------------------------------------------------------------------------------------------
+		"Modifiers"
+		{	
+			"modifier_holdout_antimage_manaburn"
+			{
+				"IsHidden"		"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_BONUS"		"%mana_burned"
+				}
+				"Damage"
+				{
+					"Target"	"TARGET"
+					"Type"		"PHYSICAL"
+					"Damage"	"16.8 24 31.2 38.4"
+				}
+			}
+		}		
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage_per_burn"		"0.6"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_burned"			"-28 -40 -52 -64"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"restore_per_burn"		"0.5"
 			}
 		}
 	}
@@ -11269,17 +11323,17 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health_regen"	"1000"
+				"bonus_health_regen"	"500"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_mana_regen"		"1000"
+				"bonus_mana_regen"		"500"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_movespeed"		"100 200 300"
+				"bonus_movespeed"		"400"
 			}
 			"06"
 			{

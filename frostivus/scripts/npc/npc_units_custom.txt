@@ -3684,11 +3684,11 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"100"						// Damage range min.
-		"AttackDamageMax"			"100"						// Damage range max.
+		"AttackDamageMin"			"99"						// Damage range min.
+		"AttackDamageMax"			"101"						// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"0.05"						// Speed of attack.
-		"AttackAnimationPoint"		"0.3"						// Normalized time in animation cycle to attack.
+		"AttackAnimationPoint"		"0.25"						// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"400"						// Range within a target can be acquired.
 		"AttackRange"				"400"						// Range within a target can be attacked.
 		"ProjectileModel"			"ranged_tower_bad"			// Particle system model for projectile.
@@ -3726,7 +3726,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"9999"		// Base health.
-		"StatusHealthRegen"			"9999"		// Health regeneration rate.
+		"StatusHealthRegen"			"500"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusStartingMana"		"0"			// Base mana.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
