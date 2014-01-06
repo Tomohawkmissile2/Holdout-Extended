@@ -1,8 +1,8 @@
-"Ability.GabenRage"
+"Ability.ArmorBoost"
 {
 	"channel"		"CHAN_STATIC"
-	"volume"		"1.0"
+	"volume"		"0.6"
 	"soundlevel"  	"SNDLVL_90dB"
 	"pitch"			"100"
-	"wave"  ")gaben_rage.mp3"
+	"wave"  ")armor_boost.mp3"
 }

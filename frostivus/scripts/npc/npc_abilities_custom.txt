@@ -10608,7 +10608,8 @@
 		{
 			"ApplyModifier"
 			{
-				"ModifierName" "modifier_holdout_penitence"
+				"ModifierName" 	"modifier_holdout_penitence"
+				"IsDebuff"		"1"
 				"Target"
 				{
 					"Center"		"TARGET"
@@ -10620,7 +10621,7 @@
 			
 			"FireSound"
 			{
-				"EffectName"			"Ability.GushCast"
+				"EffectName"			"Hero_Chen.PenitenceCast"
 			}
 		
 		}
@@ -10703,7 +10704,7 @@
 		{
 			"FireSound"
 			{
-				"EffectName"			"Ability.GushCast"
+				"EffectName"			"Hero_Chen.TestOfFaith"
 			}
 			"Damage"
 			{
@@ -10762,6 +10763,10 @@
 
 		"OnSpellStart"
 		{
+			"FireSound"
+			{
+				"EffectName"			"Hero_Chen.HolyPersuasionCast"
+			}
 			"Heal"
 			{
 				"Target" "TARGET"
@@ -10769,8 +10774,8 @@
 			}
 			"ApplyModifier"
 			{
-				"Target"	"TARGET"
-				"ModifierName" "modifier_blessings_buff"
+				"Target"		"TARGET"
+				"ModifierName" 	"modifier_blessings_buff"
 			}
 		}
 		
@@ -10813,7 +10818,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"armor_bonus"			"5 10 15 20"
+				"armor_bonus"			"4 6 8 10"
 			}
 		}
 	}
@@ -10994,11 +10999,10 @@
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"10.0"
-		"AbilityDuration"				"20.0 20.0 20.0 20.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"95 105 115 125"		
+		"AbilityManaCost"				"100"		
 		
 		"OnSpellStart"
 		{
@@ -11009,10 +11013,10 @@
 			}	
 			
 			"FireSound"
-		{
-			"EffectName"		"Tower.Fire.Attack"
-			"Target"  "CASTER"
-		}
+			{
+				"EffectName"		"Hero_Bane.Enfeeble"
+				"Target"  "TARGET"
+			}
 		}
 
 		// Modifiers
@@ -11023,6 +11027,7 @@
 			{
 				"IsHidden"				"1"
 				"Passive"				"1"
+				"IsDebuff"				"1"
 				
 				"Aura"					"status_enfeebled"
 				"Aura_Radius"			"%radius"
@@ -11032,6 +11037,7 @@
 			
 			"status_enfeebled"
 			{
+			"IsDebuff"		"1"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%passive_reduction"
@@ -11040,6 +11046,23 @@
 			
 			"modifier_holdout_enfeebled_active"
 			{
+				"Duration"		"20"
+				"IsDebuff"		"1"
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"Target"					"TARGET"
+						"EffectName"				"bane_enfeeble"
+						"EffectAttachType"			"follow_overhead"
+						//"EffectAttachType"	"start_at_customorigin"
+							//"ControlPointEntities"
+							//{
+							//	"CASTER"	"attach_hitloc"
+							//	"TARGET"		"attach_mouth"
+							//}
+					}
+				}
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%active_reduction"
@@ -11056,15 +11079,15 @@
 				"var_type"						"FIELD_INTEGER"
 				"passive_reduction"		"-10 -15 -20 -25"
 			}
-			"01"
+			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
 				"active_reduction"		"-25 -50 -75 -100"
 			}
-			"01"
+			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"radius"		"900"
+				"radius"		"600 700 800 900"
 			}
 		}
 	}
@@ -11097,8 +11120,19 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"40 30 20 10"	
 		
+		"precache"
+		{
+			"particlefile"				"particles/units/heroes/hero_bane.pcf"
+			"soundfile"					"scripts/game_sounds/ability_boost_armor.txt"
+		}
+		
 		"OnSpellStart"
 		{
+			"FireSound"
+			{
+				"EffectName"		"Ability.ArmorBoost"
+				"Target"			"CASTER"
+			}
 			"ApplyModifier"
 			{
 				"Target"			"CASTER"
@@ -11113,6 +11147,8 @@
 		{	
 			"status_magic_resistance"
 			{
+				"Passive"		"1"
+				"IsHidden"		"1"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"		"%magic_resistance"
@@ -11150,6 +11186,7 @@
 			}
 		}
 	}
+	
 	
 	
 	//=================================================================================================================
